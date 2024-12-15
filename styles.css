@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    max-width: 120px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: none;
+    gap: 15px;
+}
+
+.navbar li {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 20px; 
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+}
+
+/* Columna Izquierda */
+.left-column {
+    flex: 0 0 100%;
+}
+
+/* Testimonio */
+.testimonio {
+    background-color: #6941c6;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+    display: none; /* Oculto por defecto */
+}
+
+/* Columna Derecha */
+.right-column {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.team img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.team-text-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* Media Queries */
+/* Desde 480px */
+@media (min-width: 480px) {
+    .testimonio {
+        display: none; /* Sigue oculta */
+    }
+
+    .headear {
+        display: none; /**Se oculta*/
+    }
+}
+
+/* Desde 768px */
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .headear {
+        display: inline;
+    }
+
+    .left-column {
+        flex: 0 0 60%;
+    }
+
+    .right-column {
+        flex: 0 0 40%;
+        padding-right: 10px;
+    }
+
+    .testimonio {
+        display: block; 
+    }
+
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    /* Navegación */
+    .navbar {
+        justify-content: space-between;
+    }
+}
